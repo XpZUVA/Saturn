@@ -1,0 +1,43 @@
+/* Aseguramos que el body ocupe toda la altura */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Contenedor principal */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/* Contenido principal */
+.main-content {
+    flex-grow: 1;
+    /* Esto hace que el contenido ocupe el espacio disponible */
+}
+
+
+
+/* Animación en bucle: Latido */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+.animated-title {
+    animation: pulse 2s infinite;
+    transition: transform 0.2s ease-in-out;
+}
